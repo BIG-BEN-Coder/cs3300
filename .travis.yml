@@ -9,13 +9,13 @@ before_install:
  - gem install bundler:2.2.11
 
 script:
-  bundle exec rspec
+ - bundle exec rspec
 
 
- deploy
-  provider heroku
-  api_key f13420c4-b3a9-4230-a48d-f9b0823aab39
-  app intense-harbor-34002
-  run "rake db:migrate"
-  on
-   all_branches true
+deploy:
+ provider: heroku
+ api_key: f13420c4-b3a9-4230-a48d-f9b0823aab39
+ app: intense-harbor-34002
+ run: "rake db:migrate"
+ on:
+  all_branches: true
