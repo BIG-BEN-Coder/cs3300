@@ -1,4 +1,3 @@
-#hope this work dog.
 language: ruby
 cache: bundler
 bundler_args: --without production
