@@ -1,5 +1,7 @@
 require "rails_helper"
 
+#PLEASE GOT FRICKING RUN TRAVIS CI OMGGGGGGG
+
 RSpec.describe Project, type: :model do
   context "validations tests" do
     it "ensures the title is present" do
