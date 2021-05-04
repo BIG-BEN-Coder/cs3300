@@ -18,4 +18,4 @@ script:
  app: intense-harbor-34002
  run: "rake db:migrate"
  on:
- branch: master
+ all_branches: true
