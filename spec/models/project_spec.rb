@@ -1,6 +1,6 @@
 require "rails_helper"
 
-#PLEASE GOT FRICKING RUN TRAVIS CI OMGGGGGGG
+#PLEASE GOT FRICKING RUN TRAVIS CI OMGGGGGGG ahahahahh
 
 RSpec.describe Project, type: :model do
   context "validations tests" do
