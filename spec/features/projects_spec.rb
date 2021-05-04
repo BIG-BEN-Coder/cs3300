@@ -20,6 +20,7 @@ RSpec.feature "Projects", type: :feature do
       #fill_in "Password", with: "123456"
       #click_button "Log in"
       expect(page).to have_content("You have signed up successfully")
+      #comment
     end
   end
 
