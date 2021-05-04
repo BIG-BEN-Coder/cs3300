@@ -5,8 +5,57 @@ require 'rails_helper'
 #end
 
 RSpec.feature "Projects", type: :feature do
+
+  context "Check Sign in" do
+    scenario "should pass" do
+    visit root_path
+      click_link "Login"
+     click_link "Sign up"
+      fill_in "Email", with: "blazerof@uccs.edu"
+      fill_in "Password", with: "123456"
+      fill_in "Password confirmation", with: "123456"
+      click_button "Sign up"
+      #click_link "Logout"
+      #fill_in "Email", with: "blazerof@uccs.edu"
+      #fill_in "Password", with: "123456"
+      #click_button "Log in"
+      expect(page).to have_content("You have signed up successfully")
+    end
+  end
+
+  context "Check Edit Profile" do
+    scenario "should pass" do
+    visit root_path
+      click_link "Login"
+     click_link "Sign up"
+      fill_in "Email", with: "blazerof@uccs.edu"
+      fill_in "Password", with: "123456"
+      fill_in "Password confirmation", with: "123456"
+      click_button "Sign up"
+      click_link "Edit profile"
+      fill_in "Email", with: "blazerof@uccs.edu"
+      fill_in "Password", with: "123456"
+      fill_in "Password confirmation", with: "123456"
+      fill_in "Current password", with: "123456"
+      click_button "Update"
+      expect(page).to have_content("Your account has been updated successfully.")
+    end
+  end
+
+
+
+
+
   context "Create new project" do
+
     before(:each) do
+      visit root_path
+      click_link "Login"
+     click_link "Sign up"
+      fill_in "Email", with: "blazerof@uccs.edu"
+      fill_in "Password", with: "123456"
+      fill_in "Password confirmation", with: "123456"
+      click_button "Sign up"
       visit new_project_path
       within("form") do
         fill_in "Title", with: "Test title"
@@ -32,6 +81,11 @@ RSpec.feature "Projects", type: :feature do
     end
 
     scenario "should be successful" do
+      click_link "Sign up"
+      fill_in "Email", with: "blazerof@uccs.edu"
+      fill_in "Password", with: "123456"
+      fill_in "Password confirmation", with: "123456"
+      click_button "Sign up"
       within("form") do
         fill_in "Description", with: "New description content"
       end
@@ -40,6 +94,11 @@ RSpec.feature "Projects", type: :feature do
     end
 
     scenario "should fail" do
+      click_link "Sign up"
+      fill_in "Email", with: "blazerof@uccs.edu"
+      fill_in "Password", with: "123456"
+      fill_in "Password confirmation", with: "123456"
+      click_button "Sign up"
       within("form") do
         fill_in "Description", with: ""
       end
@@ -51,6 +110,15 @@ RSpec.feature "Projects", type: :feature do
   context "Remove existing project" do
     let!(:project) { Project.create(title: "Test title", description: "Test content") }
     scenario "remove project" do
+      
+      visit root_path
+      click_link "Login"
+      click_link "Sign up"
+      fill_in "Email", with: "blazerof@uccs.edu"
+      fill_in "Password", with: "123456"
+      fill_in "Password confirmation", with: "123456"
+      click_button "Sign up"
+      
       visit projects_path
       click_link "Destroy"
       expect(page).to have_content("Project was successfully destroyed")
