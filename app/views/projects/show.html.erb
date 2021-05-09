@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"> <%= @project.title %></h1>
+    <p class="lead"> <%= @project.description %>.</p>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+
+
+<%= link_to 'Edit', edit_project_path(@project), class:"btn btn-dark" %> 
+<%= link_to 'Back', projects_path, class:"btn btn-dark" %>

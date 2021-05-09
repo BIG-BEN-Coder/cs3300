@@ -52,7 +52,7 @@ RSpec.feature "Projects", type: :feature do
     before(:each) do
       visit root_path
       click_link "Login"
-     click_link "Sign up"
+      click_link "Sign up"
       fill_in "Email", with: "blazerof@uccs.edu"
       fill_in "Password", with: "123456"
       fill_in "Password confirmation", with: "123456"
