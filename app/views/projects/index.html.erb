@@ -1,39 +1,27 @@
 <p id="notice"><%= notice %></p>
 
 <div class="jumbotron">
-  <h1 class="display-4">Hello, Everyone!</h1>
-  <p class="lead"> My name is Benjamin Lazeroff and I am a student at UCCS.</p>
+  <h1 class="display-4">You clicked the link!</h1>
+  <p class="lead"> This is a student group from the University of Colorado Colorado Springs. Your computer and info is SAFE!</p>
   <hr class="my-4">
-  <p>Below is some of the work I have done at UCCS. Take A Look!</p>
+  <p>Sorry we tricked you! We are working together to investigate how suceptable people can be to phishing attacks.
+    This is a joit project at as a part of our univeristy studies at UCCS. We dont want ANY personal information from you. 
+    Phishing is when someone poses as someone or someting else to try to take sensitive informatin from you.
+    This is a growing threat all around the word and has played a part in some of the worlds worst cyber insidents.
+    Since you clicked the link that means you thought that you thought you where going to see someting else which would be the first step in the phishing process.
+    All we wanted to find out as university students is if people would click the link.
+    When you clicked the link we where able to see that we tricked someone and are able to discuss this in/with our class.
+    Please look below to take a survey we have set up. This information would be extreamly helpful in our university studies.
+    You can also email us at phishingprojectuccs@gmail.com for more information.
+    Thank you for your help!</p>
   
 </div>
 
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8Deh-uvpcU7aQdmVnbaA63KG94GQ7FA7KsMFosHNte3Vqjw/viewform?embedded=true" width="640" height="1166" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
 
 
-<h1>Projects</h1>
 
-<table class="table table-striped table-bordered">
-  <thead class="table-dark">
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.title %></td>
-        <td><%= project.description %></td>
-        <td><%= link_to 'Show', project, class:"btn btn-dark" %></td>
-        <td><%= link_to 'Edit', edit_project_path(project), class:"btn btn-dark" %></td>
-        <td><%= link_to 'Destroy', project, class:"btn btn-dark", method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
 <br>
 
-<%= link_to 'New Project', new_project_path, class:"btn btn-dark" %>
+
