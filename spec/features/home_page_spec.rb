@@ -5,12 +5,7 @@ require 'rails_helper'
 #end
 
 
-RSpec.feature "Visiting the homepage", type: :feature do
-  scenario "The visitor should see Log in" do
-    visit root_path
-    expect(page).to have_text("Projects")
-  end
-end
+
 
 
 
