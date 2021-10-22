@@ -4,7 +4,7 @@ function gtag() { dataLayer.push(arguments) }
 gtag('js', new Date())
 
 const trackGoogleAnalytics = (event) => {
-  gtag('config', 'GA_MEASUREMENT_ID', {
+  gtag('config', 'G-9GDB579TQG', {
     'cookie_flags': 'max-age=7200;secure;samesite=none'
   })
 }
